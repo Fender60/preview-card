@@ -1,0 +1,109 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: hsl(30, 38%, 92%);
+}
+
+.card {
+  max-width: 600px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+@media only screen and (max-width: 650px) {
+  .card {
+    max-width: 400px;
+  }
+}
+.card__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 10px;
+  background-color: hsl(0, 0%, 100%);
+}
+@media only screen and (max-width: 650px) {
+  .card__container {
+    display: block;
+    padding-bottom: 20px;
+  }
+}
+.card__image img {
+  max-width: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+@media only screen and (max-width: 650px) {
+  .card__image img {
+    border-radius: 10px 10px 0 0;
+  }
+}
+.card__information {
+  padding: 32px 32px 0px 32px;
+}
+.card__topic {
+  font-size: 12px;
+  letter-spacing: 0.4em;
+  color: hsl(228, 12%, 48%);
+}
+.card__title {
+  font-family: "Fraunces", sans-serif;
+  font-weight: 700;
+  color: hsl(212, 21%, 14%);
+  font-size: 2em;
+  margin: 20px 0px 24px 0px;
+  line-height: 100%;
+}
+.card__text {
+  font-size: 0.88em;
+  line-height: 170%;
+  color: hsl(228, 12%, 48%);
+  margin-bottom: 24px;
+}
+.card__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  color: hsl(0, 0%, 100%);
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card-price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.price__new {
+  font-family: "Fraunces", sans-serif;
+  font-weight: 700;
+  color: hsl(158, 36%, 37%);
+  font-size: 2em;
+}
+.price__old {
+  margin-left: 20px;
+  font-size: 0.8em;
+  text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+}
+
+@media (hover: hover) {
+  button:hover {
+    background-color: hsl(158, 36%, 20%);
+  }
+}
+@media (hover: none) {
+  button:active {
+    background-color: hsl(158, 36%, 20%);
+  }
+}
